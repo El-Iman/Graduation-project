@@ -1,0 +1,207 @@
+
+
+.error div{
+  color: red;
+  font-size: 12px;
+}
+.search{
+  background-color:rgba(45, 54, 99, 0.1);
+  background-image:url(../../../assets/images/young-handsome-physician-medical-robe-with-stethoscope_1303-17818.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+  font-weight: bold;
+  color: #2D3663;
+  margin-top: 80px;
+  padding: 100px 0px 20px;
+  min-height: calc(100vh - 80px);
+}
+form{
+  width: 70%;
+  margin: 20px auto;
+  color: var(--black);
+  text-align: left !important;
+}
+.col-md-12{
+  padding-left:0 ;
+  padding-right: 0;
+}
+h1{
+  text-align: center;
+  margin: 30px 0;
+  text-shadow: 2px 2px 5px black;
+  color: white;
+  font-size: 30px;
+}
+.alert{
+  width: 70%;
+  margin: auto;
+  font-size: 14px;
+  text-align: left;
+  background: var(--black);
+  color: white;
+  border: 0;
+  font-weight: normal
+}
+[class^='col-']{
+  margin-bottom: 15px;
+}
+button{
+  margin:25px 15px 0;
+  padding: 10px 20px;
+  background-color: var(--black);
+  color: white;
+  border-radius: 30px;
+  border: none;
+}
+
+form span{
+  color: red;
+}
+
+  @media (max-width:575px) {
+    button{
+      padding: 5px 15px 6px;
+    }
+  }
+
+  /* .container
+  {
+  background-color: rgba(45, 54, 99, 0.55);
+  } */
+.container.pt-30{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.decor2 , .container h2
+{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+
+.The-Chronic
+{
+    font-weight: bolder;
+    font-size: 20px;
+    color: gray;
+    padding: 40px;
+}
+table
+{
+    width: 75%;
+    border: solid 1px gray;
+
+ padding: 20px;
+    text-align: center;
+
+}
+
+thead
+{
+    background-color: #2D3663;
+    color: white;
+
+
+}
+td{
+    background-color:white;
+    padding: 9px;
+}
+
+ td:hover
+{
+    color:#47ccc8;
+    cursor: pointer;
+    transition: .3s;
+}
+td:last-child:hover{
+  color: black;
+}
+
+
+/* the last section    */
+ .container
+{
+    text-align: center;
+    margin: auto;
+}
+table
+{
+    text-align: center;
+    margin: auto;
+}
+
+.btn-add
+{
+    width: auto;
+}
+
+.mb-25{
+  margin-bottom: 25px;
+  margin-top: 15px !important;
+}
+
+.pt-4{
+  margin:20px auto 30px;
+}
+.zer{
+  width: 70%;
+  /* border: 1px; */
+  text-align: left;
+  margin: auto;
+  height: auto !important;
+  /* padding: 15px; */
+  /* color: var(--black); */
+  /* background: white; */
+  color: white !important;
+}
+
+
+.mt-3{
+  margin-top: 30px;
+}
+@media (max-width:991px) {
+  table{
+    width: 85%;
+  }
+}
+
+@media (max-width:768px) {
+  table{
+    width: 97% !important;
+    font-size: 1.8vw !important;
+  }
+  .alert  , form{
+    width: 95%;
+  }
+
+ .pt-3{
+   padding-top: 0 !important;
+ }
+  .p-d, .zer {
+    font-size: 13px;
+    width: 97%;
+  }
+
+  .create , .buttons.d-flex{
+    font-size: 13px;
+  }
+  .section one .container{
+    padding-top: 15px !important;
+  }
+
+  .decor2 , .container h2 {
+    font-size: 5vw;
+  }
+}
+
+
+@media (max-width:575px) {
+  .search{
+    padding-top: 15px;
+  }
+}

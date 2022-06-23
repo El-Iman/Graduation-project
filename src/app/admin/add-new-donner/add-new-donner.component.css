@@ -1,0 +1,74 @@
+.error div {
+  color: red;
+  font-size: 12px;
+}
+
+.add-donor {
+  font-weight: bold;
+  color: #0f2075;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 30px;
+  font-weight: 700;
+  color: #0f2075;
+  font-size: 30px;
+}
+
+
+form {
+  color: #0f2075;
+}
+
+.col-md-6 {
+  margin: auto;
+  margin-bottom: 15px;
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+.alert {
+  width: 70%;
+  margin: auto;
+  margin-bottom: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+button {
+  margin: 10px 16%;
+  padding: 15px 30px;
+  background-color: #0f2075;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+}
+
+span {
+  color: rgb(244, 70, 70);
+}
+
+.alert {
+  font-weight: normal !important;
+  color: #0f2075;
+}
+
+.c-bff {
+  color: #007bff !important;
+  cursor: pointer;
+}
+
+@media (max-width:768px) {
+  .col-md-6 {
+    flex: 0 0 95%;
+    max-width: 95%;
+  }
+
+  button {
+    margin-left: 6%;
+  }
+}

@@ -1,0 +1,27 @@
+
+<!-- navbar -->
+  <div class="nav">
+      <div class="logo">
+          <img src="../../../assets/images/WhatsApp_Image_2022-04-06_at_6.33.27_AM-removebg-preview.png" alt="logo">
+      </div>
+      <div class="list">
+          <ul class="nav_list">
+              <li><a routerLink ="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a></li>
+              <li><a routerLink ="/diseases" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Diseases</a>
+              <li><a routerLink ="/add-donor"  routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Add Donor</a></li>
+              <li><a routerLink ="/donor-search"  routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Find Donor</a></li>
+              <li><a routerLink ="/contact-us"  routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Contact Us</a></li>
+              <li  *ngIf="!isAuth"><a routerLink ="/login"  routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Login</a></li>
+              <li  *ngIf="!isAuth"><a routerLink ="/register"  routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Register</a></li>
+              <li  *ngIf="isAuth"><a routerLink ="/profile"  routerLinkActive="active"[routerLinkActiveOptions]="{exact : true}">Profile</a></li>
+              <li  *ngIf="isAuth"><a (click)="logout()"  routerLinkActive="active"[routerLinkActiveOptions]="{exact : true}">Logout</a></li>
+          </ul>
+          <div class="burdr" (click)="navslide()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+      </div>
+  </div>
+
+

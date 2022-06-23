@@ -1,0 +1,72 @@
+.dialog-1{
+  position: fixed;
+  top: 20%;
+  right: -100%;
+  padding: 20px;
+  max-width: 300px;
+  background: white;
+  color: var(--black);
+  z-index: 99999999;
+  text-align: left;
+  transition: 1s all;
+  font-weight: 600;
+  border-top:3px solid var(--main) ;
+  border-left:3px solid var(--main) ;
+}
+.dialog-1.active{
+  right: 0;
+}
+
+.error div{
+  color: red;
+  font-size: 12px;
+}
+.login{
+  background-color:rgba(45, 54, 99, 0.1);
+  background-image:url(../../../assets/images/pexels-pixabay-40568.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+  font-weight: bold;
+  color: #2D3663;
+  margin-top: 80px;
+  padding: 50px 0px 20px;
+  min-height: calc(100vh - 80px);
+}
+form{
+  width: 70%;
+  margin: 20px auto;
+}
+h1{
+  text-align: center;
+  margin: 30px 0;
+  text-shadow: 2px 2px 5px black;
+  color: white;
+}
+
+[class^='col-']{
+  margin-bottom: 15px;
+}
+button{
+  margin:25px auto;
+  padding: 10px 20px;
+  background-color: var(--black);
+  color: white;
+  border-radius: 30px;
+  border: none;
+}
+  span{
+      color: rgb(240, 84, 84);
+  }
+
+  a{
+    cursor: pointer;
+    color: blue;
+  }
+
+  @media (max-width:575px) {
+    button{
+      padding: 5px 15px 6px;
+    }
+
+  }

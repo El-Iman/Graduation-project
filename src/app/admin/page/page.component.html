@@ -1,0 +1,136 @@
+<section>
+    <div class="sidebar">
+        <h1> <i class="fa fa-stethoscope"></i> Healthy History <i class="fa fa-times close"></i></h1>
+        <ul>
+            <a routerLink="/admin/dashboard">
+                <li>
+                    <i class="fa fa-home"></i>
+                    Home
+                </li>
+            </a>
+
+            <a class="first">
+                <li>
+                    <i class="fa fa-users"></i>
+                    Users
+                    <i class="fa fa-chevron-right chf"></i>
+                    <div class="num">{{userLength}}</div>
+                    <ul class="categ fir">
+                        <a routerLink="/admin/add/user">
+                            <li> <i class="fa fa-plus"></i> Add New User</li>
+                        </a>
+                        <a routerLink="/admin/edit/user">
+                            <li> <i class="fa fa-star-of-life"></i> Modify User's Data</li>
+                        </a>
+                        <a routerLink="/admin/show/users">
+                            <li> <i class="fa fa-star-of-life"></i>All Users</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
+
+            <a class="five">
+                <li>
+                    <i class="fa fa-users"></i>
+                    Donors
+                    <i class="fa fa-chevron-right chv"></i>
+                    <div class="num">{{donnerLength}}</div>
+                    <ul class="categ fiv">
+                        <a routerLink="/admin/add/donor">
+                            <li> <i class="fa fa-plus"></i> Add New Donor</li>
+                        </a>
+                        <a routerLink="/admin/show/donors">
+                            <li> <i class="fa fa-star-of-life"></i>All Donors</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
+
+
+            <a class="second">
+                <li>
+                    <i class="fa fa-comment-medical"></i>
+                    Advices
+                    <i class="fa fa-chevron-right chs"></i>
+                    <div class="num">{{adviceLength}}</div>
+                    <ul class="categ sec">
+                        <a routerLink="/admin/add/advice">
+                            <li> <i class="fa fa-plus"></i> Add New Advice</li>
+                        </a>
+                        <a routerLink="/admin/show/advice">
+                            <li><i class="fa fa-book-open"></i> Show Advices</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
+
+            <a class="third">
+                <li >
+                    <i class="fa fa-disease"></i>
+                    Chronic diseases
+                    <i class="fa fa-chevron-right cht"></i>
+                    <div class="num">{{userLength}}</div>
+                    <ul class="categ thi">
+                        <a routerLink="/admin/add/disease">
+                            <li> <i class="fa fa-plus"></i> Add New Disease</li>
+                        </a>
+                        <a routerLink="/admin/show/diseases">
+                            <li> <i class=""></i> All Diseases</li>
+                        </a>
+                    </ul>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="inner-content">
+        <div class="overlay"></div>
+        <nav>
+            <ul class="admin" (mouseenter)="showAdminCard()" (mouseleave)="hiddenAdminCard()">
+                <div class="admin-img">
+                    <img [src]="admin_info?.photo" alt="admin">
+                </div>
+                <div class="about-admin">
+                    <p class="name">{{admin_info?.username}}</p>
+                    <p>{{admin_info?.name}}</p>
+                </div>
+
+                <div class="admin-card hidden">
+                    <div class="brief-info">
+                        <div class="logout" (click)="logOut()">Logout</div>
+
+                        <form class="form-img">
+                            <label for="photo">
+                                <img [src]="admin_info?.photo" class="user-img" alt="photo_personal_data">
+                            </label>
+                            <input type="file" id="photo" formControlName='photo' (change)="addPhoto($event) ; " hidden>
+                        </form>
+
+                        <div class="info">
+                            <p>{{admin_info?.username}}</p>
+                            <p>{{admin_info?.email}}</p>
+                            <p>+2348139567323</p>
+                        </div>
+                        <button routerLink="/admin/edit-info">
+                            change Your Info
+                        </button>
+                    </div>
+                </div>
+
+            </ul>
+
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" title="messages" target="_blank"
+                class="message">
+                <i class="fa fa-envelope"></i>
+                <div class="notifications">8</div>
+            </a>
+            <a class="sidebar-icon"><i class="fa fa-bars"></i></a>
+        </nav>
+
+        <div class="routing">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</section>
