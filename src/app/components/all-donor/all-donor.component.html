@@ -1,0 +1,53 @@
+<!-- <app-navbar></app-navbar> -->
+<app-navbar></app-navbar>
+<div class="all-donors">
+  <div class="container">
+    <h2>All Donors</h2>
+    <div class="content" style="overflow-x: auto;">
+      <div class="table">
+        <table border="1px" >
+          <thead class="p-2">
+            <th class="p-2 color-transparent">#</th>
+            <th class="p-2">Name</th>
+            <th class="p-2">Address</th>
+            <th class="p-2 larg">Mobile</th>
+            <th class="p-2 larg">Blood_type</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let post of donors_all | paginate : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+              };
+              let i = index">
+              <td scope="row">{{post.id}}</td>
+              <td>{{post.name}}</td>
+              <td>{{post.address}}</td>
+              <td>{{post.mobile}}</td>
+              <td>{{post.blood_type}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex justify-content-center mt-20 ">
+          <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+          </pagination-controls>
+          <div class="current-page"> current page: <span>{{page}}</span></div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row-reverse bd-highlight mb-2 hidden-sm">
+        <div class="p-2 bd-highlight">
+          <select (change)="onTableSizeChange($event)" class="custom-select">
+            <option *ngFor="let size of tableSizes" [ngValue]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

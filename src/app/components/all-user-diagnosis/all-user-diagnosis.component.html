@@ -1,0 +1,44 @@
+<!-- <app-navbar></app-navbar> -->
+<app-navbar></app-navbar>
+<div class="all-donors">
+  <div class="container">
+
+    <h2>All Diagnosis</h2>
+    <div class="content">
+
+      <div class="diagnosis">
+        <div *ngFor="let post of diagnosis_all | paginate : {
+          itemsPerPage: tableSize,
+          currentPage: page,
+          totalItems: count};let i = index">{{post.diagnosis}}
+          <br>
+          <p class="create">
+            <i class="fa fa-calendar"></i> <span> {{post.created_at | slice :0:10}}</span>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="d-flex flex-row-reverse bd-highlight mb-2 hidden-sm">
+        <div class="p-2 bd-highlight">
+          <select (change)="onTableSizeChange($event)" class="custom-select">
+            <option *ngFor="let size of tableSizes" [ngValue]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center mt-20 ">
+      <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+      </pagination-controls>
+      <div class="current-page"> current page: <span>{{page}}</span></div>
+    </div>
+
+
+  </div>
+</div>
+
+<app-footer></app-footer>

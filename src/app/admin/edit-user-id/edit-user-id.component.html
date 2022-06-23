@@ -1,0 +1,36 @@
+<h1>Modify User's Data</h1>
+  
+<div class="alert alert-info" role="alert" *ngIf="erroeMassage">
+    {{erroeMassage}} 
+</div>
+
+    <form [formGroup]='myGroup' (ngSubmit)="get(myGroup)">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <label >National_id <span>*</span></label>
+          <input type="text" class="form-control" formControlName='national_id' placeholder="national_id">
+        </div>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+ 
+    <div class="alert edit alert-info d-flex" role="alert" *ngFor="let u of filtered_users; let i = index" >
+       <div class="name">{{u.full_name}}</div>
+       <div class="id">{{u.national_id}}</div>
+       <div class="action" (click)="showForm = true"><i class="fa fa-edit"></i>Edit</div>
+    </div>
+
+    <form [formGroup]='editForm' class="sec-form" *ngIf="showForm == true" (ngSubmit)="edit(editForm)">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+
+          <label >Id <span>*</span></label>
+          <input type="text" class="form-control" formControlName='id' placeholder="id">
+
+          <label >National_id <span>*</span></label>
+          <input type="text" class="form-control" formControlName='national_id' placeholder="national_id">
+
+        </div>
+      </div>
+      <button type="submit">Edit</button>
+    </form>

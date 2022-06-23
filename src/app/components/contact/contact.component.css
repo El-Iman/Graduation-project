@@ -1,0 +1,218 @@
+.full-page{
+    margin-top:80px ;
+}
+.alert{
+    width: 71%;
+    margin-top: 30px auto;
+}
+.content {
+    background-image: url(../../../assets/images/gfgfg-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.contact-us {
+    width: 71%;
+    min-height: 510px;
+    height: auto;
+    margin: 60px auto 0 0;
+    background-color: white;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.contact-us .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 7px 0 0;
+}
+.contact-us input,
+textarea {
+    margin: 20px 0px 0px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline-color: 0;
+}
+
+::placeholder {
+    color: rgb(158, 157, 157);
+    opacity: 1;
+}
+button {
+    border: 2px solid var(--black);
+    transition: 0.2s all ease-in-out;
+    background-color: var(--black);
+    color: white;
+    border-radius: 30px;
+}
+
+.call-us {
+    background-color: #292d33;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+    padding: 30px;
+    height: auto;
+    position: relative;
+    z-index: 4;
+    /* font-family: Oswald, sans-serif !important; */
+    overflow: hidden;
+}
+.call-us .dep {
+    padding: 30px 5px;
+    color: white;
+}
+.call-us .dep .dep-title i {
+    margin-right: 10px;
+    color: var(--main);
+    font-size: 19px;
+}
+.call-us .dep .dep-title img{
+    margin-right: 10px;
+    width: 30px;
+}
+.call-us .dep .dep-title span {
+    font-weight: bold;
+}
+@media (min-width: 300px) and (max-width: 766px) {
+    .content {
+        background-size: 100% 200%;
+        padding: 0px 4%;
+    }
+    .contact-us {
+        width: 100%;
+        margin: 40px auto 0 0;
+        padding: 30px 20px 30px 20px;
+    }
+    .contact-us .title {
+        font-size: 1.7rem;
+    }
+    ::placeholder {
+        font-size: 12px;
+    }
+    button {
+        margin-bottom: 10px;
+        padding: 4px 18px;
+    }
+    .call-us {
+        height: 390px;
+        width: 100%;
+        margin: 20px 45px 20px 0px;
+    }
+    .call-us .dep {
+        padding: 20px 5px;
+    }
+    .call-us .dep .dep-title img {
+        width: 18px;
+    }
+    .call-us .dep .dep-title span {
+        font-size: 15px;
+    }
+    .call-us .dep .caption {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+@media (min-width: 767px) and (max-width: 959px) {
+    .content {
+        height: 1000px;
+        background-size: 110% 110%;
+        padding: 0px 8%;
+    }
+    .contact-us {
+        padding: 30px 50px;
+    }
+    .contact-us .title {
+        font-size: 2.1rem;
+    }
+    ::placeholder {
+        font-size: 13px;
+    }
+    button {
+        padding: 6px 20px;
+    }
+    .call-us {
+        min-height: 420px;
+        width: 55%;
+        margin: -50px 45px 60px 25%;
+    }
+    .call-us .dep {
+        padding: 20px 5px;
+    }
+    .call-us .dep .dep-title img {
+        width: 20px;
+    }
+    .call-us .dep .caption {
+        margin-top: 11px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+    .content {
+        height: 740px;
+        background-size: 100% 100%;
+        padding: 0px 8%;
+    }
+    .contact-us {
+        padding: 30px 190px 30px 50px;
+    }
+    .contact-us .title {
+        font-size: 2.3rem;
+    }
+    ::placeholder {
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 22px;
+    }
+    .call-us {
+        min-height: 490px;
+        width: 40%;
+        margin: -400px 45px 60px 45%;
+    }
+    .call-us .dep .dep-title img {
+        width: 22px;
+    }
+    .call-us .dep .caption {
+        margin-top: 13px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 1200px) {
+    .content {
+        height: 730px;
+        padding: 0px 12%;
+    }
+    .contact-us {
+        padding: 30px 150px 30px 50px;
+    }
+    .contact-us .title {
+        font-size: 2.5rem;
+    }
+    ::placeholder {
+        font-size: 15px;
+    }
+    button {
+        padding: 10px 24px;
+    }
+    .call-us {
+        min-height: 451px;
+        width: 36.5%;
+        margin: -403px 45px 60px 60%;
+    }
+    .call-us .dep .dep-title img {
+        width: 27px;
+    }
+    .call-us .dep .caption {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+.error div{
+    color: red;
+    font-size: 12px;
+  }
+  button{
+      margin-top: 20px;
+  }

@@ -1,0 +1,221 @@
+<!-- navbar -->
+<div class="nav-two">
+  <div class="logo">
+    <img src="../../../assets/images/WhatsApp_Image_2022-04-06_at_6.33.27_AM-removebg-preview.png" alt="logo">
+  </div>
+  <div class="list">
+    <ul class="nav_list">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a></li>
+      <li><a routerLink="/diseases" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Diseases</a>
+      <li><a routerLink="/add-donor" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Add Donor</a>
+      </li>
+      <li><a routerLink="/donor-search" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Find
+          Donor</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Contact
+          Us</a></li> 
+      <li *ngIf="!isAuth"><a routerLink="/login" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact : true}">Login</a></li>
+
+      <li *ngIf="!isAuth"><a routerLink="/register" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact : true}">Register</a></li>
+
+      <li *ngIf="isAuth"><a routerLink="/profile" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact : true}">Profile</a></li>
+      <li *ngIf="isAuth"><a (click)="logout()" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact : true}">Logout</a></li>
+    </ul>
+    <div class="burdr" (click)="navslide()">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- header -->
+<section class="header">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="http://holamed.like-themes.com/wp-content/uploads/2018/11/SLIDE_01.jpg">
+      </div>
+      <div class="overlay"></div>
+      <div class="carousel-caption ">
+        <h1>Diagnostic <span>Center</span></h1>
+        <p>Maintain your health and life by registering on our site.Search
+          for the blood types you want through the search for a donor section of our website</p>
+        <div class="bottons">
+          <button class="login btn" *ngIf="isAuth == true" routerLink="/profile">Find Diagnostic <img class="arrow"
+              src="../../../assets/images/arrow-right.png"></button>
+          <button class="register btn" routerLink="/register" *ngIf="isAuth == false">Create your diagnosis <img
+              class="arrow" src="../../../assets/images/arrow-right.png"></button>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="http://holamed.like-themes.com/wp-content/uploads/2018/11/SLIDE_03.jpg">
+      </div>
+      <div class="overlay"></div>
+      <div class="carousel-caption ">
+        <h1>Loading <span>Doctor</span></h1>
+        <p>Search for the blood types you want through the search for a donor section of our website.</p>
+        <div class="bottons">
+          <button class="login btn" routerLink="/profile">Find Diagnostic <img class="arrow"
+              src="../../../assets/images/arrow-right.png"></button>
+          <button class="register btn" routerLink="/register" *ngIf="isAuth == false">Create your diagnosis <img class="arrow"
+              src="../../../assets/images/arrow-right.png"></button>
+        </div>
+      </div>
+    </ng-template> -->
+
+  </ngb-carousel>
+</section>
+
+
+<!-- donation slider -->
+<section class="donation" id="donation">
+  <div class="overlay"></div>
+  <div class="container" style="position: relative;">
+    <app-home-slider></app-home-slider>
+  </div>
+</section>
+
+<!-- about us -->
+<section class="about" id="about">
+  <h3> <span>About</span> Us</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="img">
+          <img src="../../../assets/images/fgd-min.jpg">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="text">
+          <p>We are a team at the Faculty of Engineering, Al-Azhar University. We thought of making this website
+            as a graduation project in order to help the general public and not a specific group of them, as it
+            helps them know their health condition and the extent of its progress or delay, as well as helping them
+            to search for a blood donor and communicate with him, and also helps in emergency situations, hoping that
+            this work will help The largest class of people possible</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- our team -->
+<section class="our-team" id="our-team">
+  <h3 >Our <span>Team</span></h3>
+  <div class="container">
+    <div class="row">
+      <div class=" col-lg-3 col-sm-6">
+        <div class="info">
+          <img src="../../../assets/images/B612_20210403_090411_882.jpg">
+          <h1>ُEman Hamdy </h1>
+          <h2> Front-End Developer</h2>
+          <p>I am curious, and enjoy work that challenges me to learn something new.I spend my whole day,
+            practically. I do my best to stay informed of changes</p>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100018485894345">
+              <img src="../../../assets/images/facebook (1).png"></a>
+            <a><img src="../../../assets/images/twitter.png"></a>
+            <a href="https://www.linkedin.com/in/emanhamdy-2030a11ab/">
+              <img src="../../../assets/images/linkedin.png"></a>
+            <a><img src="../../../assets/images/instagram (1).png"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="info">
+          <img src="../../../assets/images/sama.jpeg">
+          <h1>Sama Said</h1>
+          <h2> Back-End Developer</h2>
+          <p>I am doesn't tire and develops myself constantly and capable of
+            carrying responsibility without trouble. I prefer teamwork and learning from others </p>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100021421995638">
+              <img src="../../../assets/images/facebook (1).png"></a>
+            <a href="https://twitter.com/SamaSai66659185?t=BDt345YrY8Oqq9tg2RcHzw&s=09"><img
+                src="../../../assets/images/twitter.png"></a>
+            <a href="https://www.linkedin.com/in/sama-said-88310b19a"><img
+                src="../../../assets/images/linkedin.png"></a>
+            <a href="https://www.instagram.com/invites/contact/?i=1a0pqz3b4orpl&utm_content=kbxmch7"><img
+                src="../../../assets/images/instagram (1).png"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="info">
+          <img src="../../../assets/images/aya.jpeg">
+          <h1>Aya Mohammed</h1>
+          <h2> Front-End Designer</h2>
+          <p> I keep pace with the times of change and know every new
+            information that appears and I always try my best to reach the required with high efficiency</p>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100014783973002"><img
+                src="../../../assets/images/facebook (1).png"></a>
+            <a href=""><img src="../../../assets/images/twitter.png"></a>
+            <a href="https://www.linkedin.com/in/aya-abodief-358643199"><img
+                src="../../../assets/images/linkedin.png"></a>
+            <a href=""><img src="../../../assets/images/instagram (1).png"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 ">
+        <div class="info">
+          <img src="../../../assets/images/gehad2.jpeg">
+          <h1>Gehad Tarek</h1>
+          <h2> Back-End Developer</h2>
+          <p>I develop myself constantly in my field to keep pace with all technologies and tools,
+            I deveop my skills that qualify me to work with Team work more smoothly</p>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100009259710206"><img
+                src="../../../assets/images/facebook (1).png"></a>
+            <a href=""><img src="../../../assets/images/twitter.png"></a>
+            <a href="https://www.linkedin.com/mwlite/in/gehad-tarek-2b535916b"><img
+                src="../../../assets/images/linkedin.png"></a>
+            <a href="https://www.instagram.com/invites/contact/?i=13tpuvi00e8gm&utm_content=lwe1hl9"><img
+                src="../../../assets/images/instagram (1).png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="use-number">
+  <div class="content">
+    <div class="container">
+      <div class="number d-flex ">
+
+        <div class="item">
+          <h4>{{users}}</h4>
+          <p>Users</p>
+        </div>
+
+        <div class="item">
+          <h4>{{donors_all}}</h4>
+          <p>Donors</p>
+        </div>
+
+        <div class="item">
+          <h4>{{advices}}</h4>
+          <p>Advices</p>
+        </div>
+
+        <div class="item">
+          <h4>{{disease}}</h4>
+          <p>Diseases</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer-->
+<app-footer></app-footer>

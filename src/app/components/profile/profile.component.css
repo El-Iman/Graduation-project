@@ -1,0 +1,493 @@
+
+::ng-deep body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("../../../assets/images/istockphoto-968845176-612x612.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.profile{
+  position: relative;
+  margin-top: 165px;
+  overflow-y: hidden;
+}
+
+.container
+{
+padding-top: 15px;
+background-color: rgba(45, 54, 99, 0.7);
+padding-bottom: 5px;
+
+}
+.one h1{
+  font-size: 35px;
+  margin-bottom: 1.2rem;
+}
+.one span
+{
+font-size:20px ;
+font-weight: 500;
+color: white;
+}
+
+
+ul
+{
+    list-style:none;
+    word-spacing: 2px;
+}
+li
+{
+
+    padding: 16px;
+}
+.red
+{
+    color: rgb(243, 81, 81);
+}
+
+.one i{
+    font-size: 16px;
+    margin-right: 3px;
+    color:#47ccc8;
+}
+
+
+.photo_header
+{
+    text-align: center;
+    color: white;
+}
+
+img
+{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.parent1
+
+{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    justify-content: space-evenly;
+}
+.parent2
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+.row3
+{
+    width: 45%;
+
+}
+.row5
+{
+
+    width: 40%;
+}
+.parent3
+{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+
+/* ================================ */
+
+/* section 1   */
+
+.selection-1,
+.disease-form
+ {
+    width: 75%;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    font-size: 17px;
+    height: 0;
+    border: 0;
+    outline: 0;
+    margin: auto;
+    opacity: 0;
+    padding-right: 5px;
+    transition:all .5s !important;
+}
+.selection-1{
+  width: 100%;
+}
+.selection-1:focus{
+  outline: 0 !important;
+}
+.disease-form{
+  padding: 0 !important;
+  margin-top: 15px;
+}
+.disease-form.active{
+  height: auto;
+  opacity: 1;
+}
+.disease-form button{
+  display: none;
+
+}
+.disease-form.active button{
+ display: block;
+}
+.disease-form.active .selection-1{
+  height: 40px;
+  opacity: 1;
+ }
+.decor2 , .container h2
+{
+    font-size: 35px;
+    color: white;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.The-Chronic
+{
+    font-weight: bolder;
+    font-size: 20px;
+    color: gray;
+    padding: 40px;
+}
+table
+{
+    width: 75%;
+    border: solid 1px gray;
+    padding: 20px;
+    text-align: center;
+
+}
+
+thead
+{
+    background-color: #2D3663;
+    color: white;
+
+
+}
+td{
+    background-color:white;
+    padding: 9px;
+    white-space: nowrap;
+}
+.larg
+{
+    width: 25%;
+}
+
+.iconparent
+{
+    display: flex;
+    justify-content: space-around;
+}
+.icons
+{
+    font-size: 25px;
+    width: 20%;
+}
+ td:hover
+{
+    color:#47ccc8;
+    cursor: pointer;
+    transition: .3s;
+}
+td:last-child:hover{
+  color: black;
+}
+table  i:hover{
+  color:#47ccc8 !important;
+  cursor: pointer;
+  transition: .3s;
+}
+
+
+/* the last section    */
+section .container
+{
+    margin: auto;
+}
+table
+{
+    text-align: center;
+    margin: auto;
+}
+
+.btn-add
+{
+    width: auto;
+}
+
+.mb-25{
+  margin-bottom: 25px;
+  margin-top: 15px !important;
+}
+.diagosis-Form-add,
+.diagosis-Form-update{
+  height: 0;
+}
+textarea{
+  width: 75%;
+  margin: auto;
+  height: 0px;
+  transition: all .5s;
+  padding: 0 !important;
+  border: 0;
+  outline: 0;
+}
+.diagosis-Form-add.active textarea,
+.diagosis-Form-update.active textarea{
+  height: 130px;
+  border-width: 1px;
+  padding: 5px !important;
+}
+.diagosis-Form-add button,
+.diagosis-Form-update button{
+  display: none;
+}
+.diagosis-Form-add.active button,
+.diagosis-Form-update.active button{
+  display: block;
+  /* margin: auto; */
+  margin-left: 12.5%;
+}
+.diagosis-Form-add.active,
+.diagosis-Form-update.active{
+height: auto;
+}
+
+.p-d{
+  border: 1px solid #eee;
+  padding: 15px;
+  text-align: left;
+  background: white;
+  color: var(--black);
+  font-weight: normal;
+  font-size: 15px;
+  width: 75%;
+  margin: auto;
+}
+
+.buttons{
+  color: deepskyblue;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.create{
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.create span{
+  color: var(--black);
+}
+
+.pt-4{
+  margin:20px auto 30px;
+}
+.zer{
+  width: 75%;
+  text-align: left;
+  margin: auto;
+  margin-top: 15px;
+  height: auto !important;
+  color: white;
+}
+.buttons.d-flex{
+  justify-content: space-between;
+  font-weight: 400;
+}
+.buttons p{
+  color: var(--black);
+}
+.buttons p span{
+  color: deepskyblue;
+}
+.last-diagnosis{
+  margin-bottom: 30px !important;
+}
+@media (max-width:992px) {
+  table{
+    width: 85%;
+  }
+}
+
+@media (max-width:768px) {
+
+  table{
+    width: 97% !important;
+    font-size: 11px !important;
+  }
+  table .icons{
+    font-size: 16px !important;
+  }
+  button{
+    margin-left: 1.5% !important;
+  }
+ .pt-3{
+   padding-top: 0 !important;
+ }
+ label{
+   font-weight: 500;
+   font-size: 13px;
+ }
+ .form-control{
+   font-size: 13px;
+ }
+  .p-d, .zer , textarea{
+    font-size: 13px;
+    width: 97%;
+  }
+  .profile{
+    margin-top: 80px;
+  }
+  .create , .buttons.d-flex{
+    font-size: 13px;
+  }
+  .section one .container{
+    padding-top: 15px !important;
+  }
+  .one li{
+    padding-bottom: 0 !important;
+  }
+  .one .col-md-6{
+    padding-left: 0 !important;
+  }
+  .one span{
+    font-size: 16px;
+  }
+  .one ul{
+    padding: 0 !important;
+  }
+  .decor2 , .container h2 , .one h1{
+    font-size: 5vw;
+  }
+}
+
+.dialog-1{
+  position: fixed;
+  top: 20%;
+  right: -100%;
+  padding: 20px;
+  max-width: 300px;
+  background: white;
+  color: var(--black);
+  z-index: 99999999;
+  text-align: left;
+  transition: 1s all;
+  font-weight: 600;
+  border-top:3px solid var(--main) ;
+  border-left:3px solid var(--main) ;
+}
+.dialog-1.active{
+  right: 0;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.pb-12{
+  padding-bottom: 12px;
+}
+.mt-25{
+  margin-top: 15px;
+}
+
+[class^='col-']{
+  margin-bottom: 15px;
+}
+button{
+  margin:10px 0;
+  margin-left: 15px;
+  padding: 10px 30px;
+  background-color:   var(--black);
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+ .edit-info span{
+      color: rgb(240, 84, 84);
+  }
+  .alert{
+    font-weight: normal !important;
+    color: var(--black);
+  }
+  .c-bff{
+    color: #007bff !important;
+    cursor: pointer;
+  }
+  
+.error div{
+  color: red;
+  font-size: 12px;
+}
+.edit-info{
+  background-color:rgba(45, 54, 99, 0.1);
+  background-image:url(../../../assets/images/pexels-pixabay-40568.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+  font-weight: bold;
+  color: white;
+  text-align: left !important;
+}
+.zer.mt-0{
+  width: 100%;
+  text-align: left;
+  font-weight: normal;
+}
+.edit-form.hidden{
+  display: none;
+}
+.edit-info .text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-form  i{
+  cursor: pointer;
+}
+.close-form i.hidden{
+  display: none;
+}
+.fa-heart{
+  color: var(--main);
+}
+.for-edit{
+  text-align: right;
+  margin: 5px 0;
+}
+.for-edit a{
+  /* text-decoration: none; */
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+}

@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+
+<div class="full-page">
+    <div class="content">
+
+        <div class="alert alert-info" role="alert" *ngIf="message">
+            {{message}} <a (click)="goToHome()"> <a class="c-bff">click here</a> to go to Home</a>
+        </div>
+
+        <form [formGroup]='Form' (ngSubmit)="submit(Form)" autocomplete="off" class="contact-us">
+            <h1 class="title">CONTACT US</h1>
+
+            <input type="text" class="form-control" formControlName='name' placeholder="Enter Your Name" name="name">
+            <div class="error">
+                <div *ngIf='Form.get("name").touched && Form.get("name").errors?.pattern'>
+                    Please Type Only Characters At least 2.
+                </div>
+                <div *ngIf='Form.get("name").touched && Form.get("name").errors?.required'>
+                    Name Is Required.
+                </div>
+            </div>
+
+            <input type="email" class="form-control" formControlName='email' placeholder="Enter Your Email" name="name">
+            <div class="error">
+                <div *ngIf='Form.get("email").touched && Form.get("email").errors?.pattern'>
+                    Please Type Valid Email.
+                </div>
+                <div *ngIf='Form.get("email").touched && Form.get("email").errors?.required'>
+                    Email Is Required.
+                </div>
+            </div>
+
+            <input type="text" class="form-control" formControlName='subject' placeholder="Enter Subject" name="subject">
+            <div class="error">
+                <div *ngIf='Form.get("subject").touched && Form.get("subject").errors?.required'>
+                    Subject Is Required.
+                </div>
+            </div>
+
+            <textarea type="text" class="form-control" formControlName='content' 
+               rows="3" placeholder="Enter Content" name="content"></textarea>
+            <div class="error">
+                <div *ngIf='Form.get("content").touched && Form.get("content").errors?.required'>
+                    Content Is Required.
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!Form.valid">Submit</button>
+        </form>
+
+        <div class="call-us">
+            <div class="dep">
+                <div class="dep-title">
+                    <i class="fa fa-phone"></i>
+                    <span>CALL US</span>
+                </div>
+                <P class="caption">+2 01009647973, +2 01024722086</P>
+            </div>
+
+            <div class="dep">
+                <div class="dep-title">
+                    <i class="fa fa-envelope"></i>
+                    <span>Email</span>
+                </div>
+                <P class="caption">healthhistory@gmail.com</P>
+            </div>
+
+            <div class="dep">
+                <div class="dep-title">
+                    <img src="../../../assets/images/24-hour-service.png" alt="24hours">
+                    <span>BESINESS HOURS</span>
+                </div>
+                <P class="caption">Mon – Fri ..... 10 am – 8 pm, Sat, Sun ..... Closed</P>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>
